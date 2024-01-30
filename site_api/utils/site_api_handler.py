@@ -22,7 +22,7 @@ def _make_response(method: str, url: str, headers: Dict, params: Dict,
 
 
 def _get_movie_data_by_id(method: str, url: str, headers: Dict, params: Dict, movie_id: int,
-                          timeout: int, func=_make_response):
+                          timeout: int = 5, func=_make_response):
     url = "{0}top{1}".format(url, movie_id)
 
     response = func(method, url, headers=headers, params=params, timeout=timeout)
@@ -35,7 +35,6 @@ class SiteApiInterface():
     @staticmethod
     def get_movie_data_by_id():
         return _get_movie_data_by_id
-
 
 
 if __name__ == "__main__":
