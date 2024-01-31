@@ -3,7 +3,7 @@
 from site_api.utils.site_api_handler import SiteApiInterface
 
 headers = {
-    "X-RapidAPI-Key": "put-the-key-here",
+    "X-RapidAPI-Key": "your-key",
     "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com"
 }
 
