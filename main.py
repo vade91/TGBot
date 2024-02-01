@@ -4,9 +4,10 @@ from telebot.handler_backends import State, StatesGroup
 from telebot.storage import StateMemoryStorage
 
 from site_api.core import site_api, url, headers, params
+from config_data import config
 
 state_storage = StateMemoryStorage()
-bot = telebot.TeleBot(token="your-token", state_storage=state_storage)
+bot = telebot.TeleBot(token=config.BOT_TOKEN, state_storage=state_storage)
 
 
 class MyStates(StatesGroup):
